@@ -13,8 +13,14 @@ function addExcitement (theWordArray) {
 
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
+        // i starting at 0 put exclamation marks in wrong iteration spot
+        if ((i + 1) % 3 === 0) {
+            buildMeUp += theWordArray[i] + "! "
+        } else {
+            // space between "" corrects word spacing 
         buildMeUp += theWordArray[i] + " ";
         console.log(buildMeUp);
+        }
         // Print buildMeUp to the console
     }
 
