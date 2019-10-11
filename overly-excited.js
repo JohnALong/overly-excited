@@ -6,7 +6,8 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement (theWordArray) {
+// added punctuation argument
+function addExcitement (theWordArray, punctuation) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -15,7 +16,8 @@ function addExcitement (theWordArray) {
         // Concatenate the new word onto buildMeUp
         // i starting at 0 put exclamation marks in wrong iteration spot
         if ((i + 1) % 3 === 0) {
-            buildMeUp += theWordArray[i] + "! "
+            // changed build up to support punctuation argument
+            buildMeUp += theWordArray[i] + " " + punctuation + " "
         } else {
             // space between "" corrects word spacing 
         buildMeUp += theWordArray[i] + " ";
@@ -27,4 +29,4 @@ function addExcitement (theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence)
+addExcitement(sentence, "&")
