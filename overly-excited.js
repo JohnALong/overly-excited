@@ -1,6 +1,6 @@
 // Create an array that contains the words in the sentence
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
-
+console.log(sentence.length);
 /*
     The addExcitement function should be an impure function, and accept
     the array as the sole argument. It should iterate over the array
@@ -16,8 +16,8 @@ function addExcitement (theWordArray, punctuation) {
         // Concatenate the new word onto buildMeUp
         // i starting at 0 put exclamation marks in wrong iteration spot
         if ((i + 1) % 3 === 0) {
-            // changed build up to support punctuation argument
-            buildMeUp += theWordArray[i] + " " + punctuation + " "
+            buildMeUp += theWordArray[i] + "! "
+            console.log(buildMeUp);
         } else {
             // space between "" corrects word spacing 
         buildMeUp += theWordArray[i] + " ";
@@ -29,4 +29,4 @@ function addExcitement (theWordArray, punctuation) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence, "&")
+addExcitement(sentence, "!")
