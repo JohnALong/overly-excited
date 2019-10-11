@@ -16,7 +16,7 @@ function addExcitement (theWordArray, punctuation) {
         // Concatenate the new word onto buildMeUp
         // i starting at 0 put exclamation marks in wrong iteration spot
         if ((i + 1) % 3 === 0) {
-            buildMeUp += theWordArray[i] + "! "
+            buildMeUp += theWordArray[i] + punctuation + " "
             console.log(buildMeUp);
         } else {
             // space between "" corrects word spacing 
@@ -29,4 +29,4 @@ function addExcitement (theWordArray, punctuation) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence, "!")
+addExcitement(sentence, "stuff")
